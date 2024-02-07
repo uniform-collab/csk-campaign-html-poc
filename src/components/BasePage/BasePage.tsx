@@ -73,7 +73,6 @@ const BasePage: FC<BasePageProps> = ({
   context,
   localizationSettings,
 }) => {
-  console.log({ composition });
   if (composition?.type !== 'campaignPage') {
     return (
       <UniformComposition
