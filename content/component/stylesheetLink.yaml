@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: stylesheetLink
+name: Stylesheet Link
+icon: card-spades
+parameters:
+  - id: href
+    name: Href
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-02-07T00:09:25.88211+00:00'
+updated: '2024-02-07T00:09:25.88211+00:00'

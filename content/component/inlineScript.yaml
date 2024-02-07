@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: inlineScript
+name: Inline Script
+icon: code-slash
+parameters:
+  - id: scriptCode
+    name: Script Code
+    type: text
+    helpText: the code will be wrapped in the script tag
+    typeConfig:
+      multiline: true
+      linesCount: 10
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-02-06T23:47:39.331599+00:00'
+updated: '2024-02-06T23:49:17.448514+00:00'

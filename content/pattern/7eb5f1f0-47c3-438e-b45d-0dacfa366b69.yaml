@@ -1,0 +1,14 @@
+composition:
+  _name: GTM Analytics
+  _id: 7eb5f1f0-47c3-438e-b45d-0dacfa366b69
+  type: externalScript
+  parameters:
+    async:
+      type: checkbox
+      value: true
+    externalScriptSource:
+      type: text
+      value: https://www.google-analytics.com/analytics.js
+created: '2024-02-07T00:15:21.228533+00:00'
+modified: '2024-02-07T00:15:21.228533+00:00'
+pattern: true

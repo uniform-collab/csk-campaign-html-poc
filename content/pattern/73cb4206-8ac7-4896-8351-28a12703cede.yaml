@@ -1,0 +1,13 @@
+composition:
+  _name: GTM iframe
+  _id: 73cb4206-8ac7-4896-8351-28a12703cede
+  type: noscript
+  parameters:
+    noScriptBody:
+      type: text
+      value: |2-
+         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VP7ZXD" height="0" width="0"
+              style="display:none;visibility:hidden"></iframe>
+created: '2024-02-07T00:32:37.214804+00:00'
+modified: '2024-02-07T00:32:37.214804+00:00'
+pattern: true

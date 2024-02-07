@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: inlineStyle
+name: Inline Style
+icon: code-slash
+parameters:
+  - id: inlineCssCode
+    name: Inline CSS Code
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+      multiline: true
+      linesCount: 20
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-02-07T00:10:08.269098+00:00'
+updated: '2024-02-07T00:10:08.269098+00:00'

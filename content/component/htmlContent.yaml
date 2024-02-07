@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: htmlContent
+name: HTML Content
+icon: format-heading
+parameters:
+  - id: content
+    name: Content
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 30
+    localizable: false
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-02-06T23:38:00.834193+00:00'
+updated: '2024-02-06T23:38:00.834193+00:00'

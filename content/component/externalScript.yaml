@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: externalScript
+name: External Script
+icon: code
+parameters:
+  - id: externalScriptSource
+    name: External Script Source
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+    localizable: false
+  - id: async
+    name: Async
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-02-06T23:48:24.874084+00:00'
+updated: '2024-02-07T00:07:23.787187+00:00'

@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: campaignPage
+name: Campaign Page
+icon: card
+parameters:
+  - id: title
+    name: Page Title
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: false
+  - id: pageDescription
+    name: Page Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 5
+    localizable: false
+  - id: ogtitle
+    name: og:title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+    localizable: false
+  - id: ogdescription
+    name: og:description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 5
+    localizable: false
+  - id: ogImage
+    name: og:image
+    type: image
+    helpText: ''
+    typeConfig: null
+    localizable: false
+categoryId: 31fcffb0-aead-4256-8e49-4d50cc28aa29
+useTeamPermissions: true
+slots:
+  - id: pageHeader
+    name: Page Header
+    allowedComponents:
+      - inlineStyle
+      - inlineScript
+      - stylesheetLink
+      - externalScript
+      - noscript
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: pageContent
+    name: Page Content
+    allowedComponents:
+      - htmlContent
+      - noscript
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: pageFooter
+    name: Page Footer
+    allowedComponents:
+      - externalScript
+      - inlineScript
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: true
+created: '2024-02-06T23:37:27.339569+00:00'
+updated: '2024-02-07T00:32:25.257207+00:00'

@@ -1,0 +1,19 @@
+composition:
+  _name: GTM Data Layer
+  _id: 659ff37b-ad7d-4a97-9dcd-40ef38614989
+  type: inlineScript
+  parameters:
+    scriptCode:
+      type: text
+      value: |-
+        (function (w, d, s, l, i) {
+              w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                  new Date().getTime(), event: 'gtm.js'
+              }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                  'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5VP7ZXD');
+created: '2024-02-07T00:16:00.626103+00:00'
+modified: '2024-02-07T00:16:00.626103+00:00'
+pattern: true

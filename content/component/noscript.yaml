@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: noscript
+name: NoScript
+icon: bot
+parameters:
+  - id: noScriptBody
+    name: No Script Body
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: 10
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-02-07T00:08:06.953108+00:00'
+updated: '2024-02-07T00:08:06.953108+00:00'
