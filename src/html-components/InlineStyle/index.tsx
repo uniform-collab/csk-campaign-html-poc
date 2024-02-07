@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import DOMPurify from 'isomorphic-dompurify';
+// import DOMPurify from 'isomorphic-dompurify';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 
 export type InlineStyleProps = ComponentProps<{
@@ -7,7 +7,7 @@ export type InlineStyleProps = ComponentProps<{
 }>;
 
 export const InlineStyle: FC<InlineStyleProps> = ({ inlineCssCode }) => {
-  console.log({ css: DOMPurify.sanitize(inlineCssCode) });
+  // console.log({ css: DOMPurify.sanitize(inlineCssCode) });
   return null;
   return (
     <style jsx>{inlineCssCode}</style>
