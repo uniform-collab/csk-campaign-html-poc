@@ -13,7 +13,8 @@ import '@/canvas';
 
 import '@/html-components';
 
-import '../styles/globals.scss';
+// tODO: figure out how to load css conditionally
+// import '../styles/globals.scss';
 
 import { getMediaUrl } from '../utilities';
 
@@ -52,7 +53,7 @@ const App = ({
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} /> */}
 
-          <style global jsx>{`
+          {/* <style global jsx>{`
             *,
             :after,
             :before {
@@ -87,7 +88,7 @@ const App = ({
               -webkit-text-size-adjust: 100%;
               text-size-adjust: 100%;
             }
-          `}</style>
+          `}</style> */}
           <UniformComposition data={composition}>
             <UniformSlot name="pageHeader" />
           </UniformComposition>

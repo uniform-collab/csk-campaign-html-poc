@@ -8,6 +8,7 @@ export type InlineStyleProps = ComponentProps<{
 
 export const InlineStyle: FC<InlineStyleProps> = ({ inlineCssCode }) => {
   console.log({ css: DOMPurify.sanitize(inlineCssCode) });
+  return null;
   return (
     <style jsx>{inlineCssCode}</style>
     // <style

@@ -23,10 +23,7 @@
     "uniform:push": "uniform sync push",
     "uniform:publish": "uniform context manifest publish",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "postinstall": "cd cli-run && npm install && npm run build && cd ../cli-scaffold && npm install && npm run build",
-    "cli": "npm i && cd cli-run && node dist/index.mjs",
-    "scaffold": "npm i && node cli-scaffold/dist/index.mjs"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^16.1.0",

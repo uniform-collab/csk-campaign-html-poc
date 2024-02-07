@@ -49,3 +49,8 @@ export const getStaticPaths = async () => {
     fallback: 'blocking',
   };
 };
+
+// tODO: move the page file to another location or do  this conditionally
+export const config = {
+  unstable_runtimeJS: false,
+};
