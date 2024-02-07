@@ -2,13 +2,20 @@ import Head from 'next/head';
 import { UniformAppProps } from '@uniformdev/context-next';
 import { UniformContext } from '@uniformdev/context-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
+import { UniformComposition, UniformSlot } from '@uniformdev/canvas-react';
+
 import type { Asset } from '@uniformdev/assets';
 import { NextIntlClientProvider } from 'next-intl';
 import { useRouter } from 'next/router';
 import { LazyMotion, domAnimation } from 'framer-motion';
 import createUniformContext from '@/context/createUniformContext';
 import '@/canvas';
-import '../styles/globals.scss';
+
+import '@/html-components';
+
+// tODO: figure out how to load css conditionally
+// import '../styles/globals.scss';
+
 import { getMediaUrl } from '../utilities';
 
 const clientContext = createUniformContext();
@@ -22,6 +29,75 @@ const App = ({
 }: UniformAppProps<{ data: RootComponentInstance; context: unknown; translations?: Record<string, string> }>) => {
   const router = useRouter();
   const { data: composition } = pageProps || {};
+  if (composition?.type === 'campaignPage') {
+    const { title, ogtitle, pageDescription } = composition?.parameters || {};
+    return (
+      <>
+        <Head>
+          <title>{(title?.value as string) ?? 'Hortica'}</title>
+          <meta name="description" content={pageDescription?.value as string} />
+          {/* <meta name="keywords" content={pageKeywords?.value as string} /> */}
+          <meta property="og:title" content={(ogtitle?.value as string) ?? title?.value} />
+          {/* <meta
+            property="og:description"
+            content={(openGraphDescription?.value as string) ?? pageMetaDescription?.value}
+          />
+          {renderOgImageElement()}
+          <meta name="twitter:title" content={(twitterTitle?.value as string) ?? pageTitle?.value} />
+          <meta name="twitter:card" content={(twitterCard?.value as string) ?? 'summary'} />
+          <meta
+            name="twitter:description"
+            content={(twitterDescription?.value as string) ?? pageMetaDescription?.value}
+          />
+          {renderTwitterImageElement() as any}
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} /> */}
+
+          {/* <style global jsx>{`
+            *,
+            :after,
+            :before {
+              box-sizing: border-box;
+              outline: 0;
+            }
+            body,
+            figure,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            li,
+            p,
+            ul {
+              margin: 0;
+            }
+            ul {
+              list-style-type: none;
+              padding-inline-start: 0;
+            }
+            li {
+              padding: 0;
+            }
+            a {
+              text-decoration: none;
+            }
+            body {
+              -ms-text-size-adjust: 100%;
+              -webkit-text-size-adjust: 100%;
+              text-size-adjust: 100%;
+            }
+          `}</style> */}
+          <UniformComposition data={composition}>
+            <UniformSlot name="pageHeader" />
+          </UniformComposition>
+        </Head>
+
+        <Component {...pageProps} />
+      </>
+    );
+  }
   const {
     pageTitle,
     pageMetaDescription,

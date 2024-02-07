@@ -13,6 +13,7 @@ import ThemeProvider from '../ThemeProvider';
 import { getGapClass, getMarginBottomClass, PaddingSize } from '../../utilities/styling';
 import { CHILDREN_CONTAINER_STYLES, COMMON_PADDING } from '../../hocs/withoutContainer';
 import { BasePageProps } from './';
+import CampaignPage from '@/html-components/CampaignPage';
 
 const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 'providers' | 'styles'>> = ({
   useUniformComposition,
@@ -71,21 +72,27 @@ const BasePage: FC<BasePageProps> = ({
   styles,
   context,
   localizationSettings,
-}) => (
-  <UniformComposition
-    data={composition}
-    behaviorTracking="onLoad"
-    contextualEditingEnhancer={createUniformApiEnhancer({ apiUrl: '/api/preview' })}
-  >
-    <ComponentStarterKitContextProvider {...(context || {})} localizationSettings={localizationSettings}>
-      <PageContent
-        useUniformComposition={useUniformComposition}
-        preview={preview}
-        providers={providers}
-        styles={styles}
-      />
-    </ComponentStarterKitContextProvider>
-  </UniformComposition>
-);
-
+}) => {
+  console.log({ composition });
+  if (composition?.type !== 'campaignPage') {
+    return (
+      <UniformComposition
+        data={composition}
+        behaviorTracking="onLoad"
+        contextualEditingEnhancer={createUniformApiEnhancer({ apiUrl: '/api/preview' })}
+      >
+        <ComponentStarterKitContextProvider {...(context || {})} localizationSettings={localizationSettings}>
+          <PageContent
+            useUniformComposition={useUniformComposition}
+            preview={preview}
+            providers={providers}
+            styles={styles}
+          />
+        </ComponentStarterKitContextProvider>
+      </UniformComposition>
+    );
+  } else {
+    return <CampaignPage composition={composition} />;
+  }
+};
 export default BasePage;

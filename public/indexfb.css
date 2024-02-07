@@ -1,0 +1,892 @@
+body,
+input {
+  color: #000;
+  font-family: Roboto, sans-serif;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+}
+footer,
+main,
+main > section {
+  max-width: 85.375rem;
+  margin: 0 auto;
+}
+main {
+  position: relative;
+  top: 3.75rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+h1,
+h5 {
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+h2,
+h3,
+h4 {
+  color: #060;
+}
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-bottom: 0.375rem;
+  text-shadow: 0 2px 7px rgba(0, 0, 0, 0.51);
+}
+h2 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  font-weight: 400;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+.italic {
+  font-style: italic;
+}
+@media print, screen and (min-width: 48em) {
+  h1 {
+    font-size: 2.125rem;
+    line-height: 2.875rem;
+  }
+  h2,
+  h5 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    line-height: 1.875rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+  }
+}
+@media print, screen and (min-width: 64.0625em) {
+  h1 {
+    font-size: 2.625rem;
+    line-height: 2.875rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+  h5 {
+    font-size: 2.125rem;
+    line-height: 2.875rem;
+  }
+}
+.btn {
+  background: #060;
+  color: #fff;
+  border-radius: 1.875rem;
+  text-align: center;
+  box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.16);
+  transition: all 0.1s;
+  font-size: 1.25rem;
+  border: 3px solid #060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn:hover {
+  background: #fff;
+  color: #060;
+}
+.btn:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.16);
+}
+.btn[disabled] {
+  opacity: 0.75;
+  pointer-events: none;
+}
+.btn[type='submit'] {
+  border: 3px solid #060;
+}
+.btn.alt {
+  background: #fff;
+  color: #060;
+}
+.btn.alt:hover {
+  background: #060;
+  color: #fff;
+}
+footer {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 7%;
+}
+footer section {
+  order: 1;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+footer figure {
+  text-align: center;
+}
+footer a {
+  color: #fff;
+}
+footer p {
+  font-size: 0.625rem;
+  line-height: 1rem;
+}
+footer svg {
+  border-radius: 50%;
+  cursor: pointer;
+}
+footer svg * {
+  transition: fill 0.1s;
+}
+footer svg:hover circle {
+  fill: #fff;
+}
+footer svg:hover path {
+  fill: #060;
+}
+footer .social,
+footer section {
+  text-align: center;
+}
+footer .links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.875rem;
+}
+footer .links a {
+  text-decoration: underline;
+}
+footer .brand {
+  max-width: 12.5rem;
+  margin: 0 auto 1.875rem;
+}
+footer .legalese a:hover {
+  text-decoration: underline;
+}
+footer .social {
+  width: 13.75rem;
+  margin: 1.875rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer .social a:nth-child(4) svg {
+  transform: scale(1.2032) translateY(0.15625rem);
+}
+@media print, screen and (min-width: 48em) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer section {
+    order: 0;
+    text-align: left;
+    flex-basis: 58%;
+  }
+  footer nav > figure {
+    order: 1;
+    text-align: right;
+  }
+  footer p {
+    text-align: left;
+  }
+  footer br {
+    display: none;
+  }
+  footer .social {
+    margin: 0 auto 2rem;
+  }
+  footer .brand {
+    max-width: none;
+    margin-bottom: 1.25rem;
+  }
+  footer .links {
+    max-width: 23.4375rem;
+  }
+}
+header {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  height: 3.75rem;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  z-index: 9;
+}
+header div {
+  padding: 0 7%;
+  max-width: 85.375rem;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header p a {
+  color: #284f18;
+  font-weight: 700;
+  transition: color 0.1s;
+  font-size: 1.125rem;
+}
+header p a:focus {
+  color: #060;
+}
+header p a:focus path {
+  fill: #060;
+}
+header p a:hover {
+  text-decoration: underline;
+}
+header path {
+  transition: fill 0.1s;
+}
+@media print, screen and (min-width: 64.0625em) {
+  header div {
+    padding: 0 6.40238rem;
+  }
+}
+section.intro {
+  width: 100%;
+  height: 100%;
+  background: rgba(169, 194, 63, 0.11);
+  padding: 1.25rem 7%;
+}
+section.intro h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.9375rem;
+}
+section.intro p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media print, screen and (min-width: 48em) {
+  section.intro {
+    padding: 2rem 7%;
+  }
+  section.intro h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.25rem;
+  }
+}
+@media print, screen and (min-width: 64.0625em) {
+  section.intro {
+    padding: 2.5rem 7% 3.125rem;
+  }
+  section.intro h2 {
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+    margin-bottom: 2.25rem;
+  }
+  section.intro p {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  top: -100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: rgba(0, 0, 0, 0.5);
+}
+.form #form-close-1 {
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+}
+.form form {
+  position: relative;
+  background: #fff;
+  flex: 1;
+  padding: 0.875rem calc(7% - 0.5rem);
+  max-width: 23.4375rem;
+  margin: 0;
+  top: 3.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc(100% - 3.75rem);
+}
+.form h4 {
+  color: #060;
+  font-size: 1.5rem;
+  line-height: 1.6875rem;
+  letter-spacing: -0.01562rem;
+  width: calc(100% - 40px);
+  margin-bottom: 0.75rem;
+}
+.form h4 br {
+  display: none;
+}
+.form p {
+  font-size: 0.875rem;
+  line-height: 0.9375rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.form p.submit {
+  text-align: center;
+  margin-top: 1rem;
+  align-items: center;
+  margin-bottom: 0;
+}
+.form input,
+.form label {
+  margin-bottom: 0.25rem;
+}
+.form input {
+  padding: 0 0.375rem;
+  height: 2.25rem;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  border: 1px solid #3e3a34;
+}
+.form .btn {
+  min-width: 14.625rem;
+  min-height: 3.4375rem;
+  width: 100%;
+  max-width: 26.875rem;
+  cursor: pointer;
+}
+.form .fields {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.form.alt figure {
+  order: 1;
+}
+.form.submit .fields,
+.form .thank {
+  display: none;
+}
+.form.submit .thank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.form.submit .thank h4,
+.form.submit .thank p {
+  text-align: center;
+  width: 100%;
+}
+.form.submit .thank h4 {
+  margin-bottom: 1rem;
+}
+.form.submit .thank p {
+  margin-bottom: 3rem;
+}
+.form .validate input:invalid {
+  border: 1px solid #ff4136;
+}
+@media print, screen and (min-width: 48em) {
+  .form form {
+    min-height: 0;
+    padding: 1rem 1.25rem;
+    height: auto;
+    max-width: 37.5rem;
+    max-height: 29.375rem;
+    top: 4.75rem;
+  }
+  .form h4 {
+    font-size: 1.875rem;
+    line-height: 1.125;
+    width: 100%;
+    margin-top: 2.625rem;
+  }
+  .form p {
+    width: 12.5rem;
+    margin: 0 0.9375rem;
+  }
+  .form p.biz,
+  .form p.submit {
+    width: 26.875rem;
+  }
+  .form input {
+    margin-bottom: 0;
+  }
+  .form .fields {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .form #form-close-1 {
+    top: 1rem;
+    right: 0.25rem;
+  }
+  .form.submit .thank p {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+  }
+}
+@media print, screen and (min-width: 64.0625em) {
+  .form form {
+    top: 6rem;
+  }
+}
+.form-open .form {
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.4s ease 0.1s;
+}
+section.records {
+  padding: 1.5rem 0 0.875rem;
+  background: #fff;
+}
+section.records > div {
+  max-width: 22.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+section.records h2 {
+  margin-bottom: 1.25rem;
+}
+section.records p {
+  margin-bottom: 2rem;
+}
+section.records p br {
+  display: none;
+}
+section.records figure {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 19.375rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+section.records figure .img {
+  margin: 0 0 1.25rem;
+  flex: 0 1 50%;
+  max-width: 50%;
+}
+@media print, screen and (min-width: 48em) {
+  section.records {
+    padding: 1.875rem 7% 0.875rem;
+  }
+  section.records > div {
+    max-width: none;
+  }
+  section.records p {
+    margin: 0 auto 2rem;
+  }
+  section.records p br {
+    display: inline;
+  }
+  section.records figure {
+    max-width: none;
+    justify-content: space-around;
+  }
+  section.records figure .img {
+    flex-basis: 33%;
+  }
+  section.records figure .img:nth-child(2n),
+  section.records figure .img:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media print, screen and (min-width: 64.0625em) {
+  section.records {
+    padding: 3.5rem 7%;
+  }
+  section.records p {
+    max-width: 56.25rem;
+  }
+  section.records figure .img {
+    flex-basis: auto;
+  }
+}
+section.cta {
+  background: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/plantmin.ashx);
+  background-size: cover;
+  background-position: 86% 100%;
+  height: 25.625rem;
+  padding: 2.75rem 3.75%;
+  padding-left: 7%;
+}
+section.cta h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #fff;
+  max-width: 20.625rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+section.cta .btn {
+  width: 100%;
+  height: 3.4375rem;
+  margin: 0 auto;
+  max-width: 20.625rem;
+}
+@media screen and (max-width: 85.3125em) {
+  section.cta[data-loaded='true'] {
+    background: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/plantlz.ashx);
+    background-size: cover;
+    background-position: 86% 100%;
+  }
+}
+@media (-ms-high-contrast: none) {
+  section.cta,
+  section.cta ::-ms-backdrop {
+    background: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/plantlz.ashx);
+    background-size: cover;
+    background-position: 86% 100%;
+  }
+}
+@media print, screen and (min-width: 48em) {
+  section.cta .btn {
+    width: 14.6875rem;
+    height: 3.4375rem;
+  }
+  section.cta h3 {
+    font-size: 1.3125rem;
+    line-height: 2rem;
+    max-width: 19.6875rem;
+    text-align: left;
+  }
+  section.cta .btn {
+    margin: 0;
+  }
+}
+@media print, screen and (min-width: 64.0625em) {
+  section.cta {
+    height: 28.75rem;
+  }
+  section.cta h3 {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+    max-width: 33.75rem;
+    text-align: left;
+  }
+  section.cta .btn {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 85.375em) and (-webkit-max-device-pixel-ratio: 1) {
+  section.cta[data-loaded='true'] {
+    background: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/plantlz.ashx);
+    background-size: cover;
+    background-position: 86% 100%;
+  }
+}
+@media only screen and (min-width: 85.375em) {
+  section.cta[data-loaded='true'] {
+    background: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/plant2xlz.ashx);
+    background-size: cover;
+    background-position: 86% 100%;
+  }
+}
+.hero {
+  margin-bottom: -16.875rem;
+}
+.hero .top {
+  padding: 1.875rem 1.25rem 18%;
+  min-height: 12.5rem;
+  height: 52.8vw;
+  max-height: 35.9375rem;
+}
+@media only screen and (max-width: 26em) and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 26em) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 26em) and (min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 26em) and (min-resolution: 1.5dppx) {
+  .hero .top {
+    background: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/herov32x.ashx),
+      linear-gradient(90deg, #060, #060);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 26em) and (-webkit-max-device-pixel-ratio: 1) {
+  .hero .top {
+    background-image: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/herov3.ashx),
+      linear-gradient(90deg, #060, #060);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 47.9375em) {
+  .hero .top {
+    background-image: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/herov3.ashx),
+      linear-gradient(90deg, #060, #060);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 47.9375em) and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 47.9375em) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 47.9375em) and (min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 47.9375em) and (min-resolution: 1.5dppx) {
+  .hero .top {
+    background: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/herov32x.ashx),
+      linear-gradient(90deg, #060, #060);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 48em) and (max-width: 64em) {
+  .hero .top {
+    background-image: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/herov31024.ashx),
+      linear-gradient(90deg, #060, #060);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 64.0625em) {
+  .hero .top {
+    background-image: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/herov31366.ashx),
+      linear-gradient(90deg, #060, #060);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 64.0625em) and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (min-width: 64.0625em) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-width: 64.0625em) and (min-device-pixel-ratio: 1.5),
+  only screen and (min-width: 64.0625em) and (min-resolution: 1.5dppx) {
+  .hero .top {
+    background-image: url(https://www.hortica.com/-/media/hortica/home-page/nosubstitute/assets/img/herov313662x.ashx),
+      linear-gradient(90deg, #060, #060);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.hero .iframe {
+  max-width: 86%;
+}
+.hero .iframe-container {
+  max-width: 45.625rem;
+  max-height: 26.875rem;
+  margin: 0 auto;
+  transform: translateY(-11.25rem);
+  text-align: center;
+}
+.hero .video {
+  background: #fff;
+}
+@media print, screen and (min-width: 31.25em) {
+  .hero {
+    margin-bottom: -13.125rem;
+  }
+  .hero .iframe-container {
+    transform: translateY(-12.5rem);
+  }
+}
+@media print, screen and (min-width: 48em) {
+  .hero {
+    margin-bottom: -18.75rem;
+  }
+  .hero .top {
+    padding: 3.125rem 0 20%;
+    min-height: 25rem;
+  }
+  .hero .iframe {
+    max-width: 88%;
+  }
+  .hero .iframe-container {
+    transform: translateY(-16.875rem);
+  }
+}
+@media print, screen and (min-width: 64.0625em) {
+  .hero {
+    margin-bottom: -22.5rem;
+  }
+  .hero .top {
+    padding: 5.5rem 0 0;
+  }
+  .hero .iframe-container {
+    transform: translateY(-22.5rem);
+  }
+  .hero .iframe {
+    max-width: unset;
+    width: 45.625rem;
+  }
+}
+@media screen and (min-width: 85.375em) {
+  .hero {
+    margin-bottom: -21.25rem;
+  }
+  .hero .iframe-container {
+    transform: translateY(-21.25rem);
+  }
+}
+.hero-cta {
+  background: #fff;
+}
+.hero-cta h2 {
+  margin: 0 0 1.25rem;
+}
+.hero-cta .btn {
+  width: 14.6875rem;
+  height: 3.4375rem;
+  margin: 1.25rem auto 0;
+}
+@media print, screen and (min-width: 48em) {
+  .hero-cta .btn {
+    margin: 2.5rem auto 0;
+  }
+  .hero-cta .text {
+    margin-top: 1.5rem;
+  }
+}
+.card-display {
+  background: #f2f8ef;
+  padding: 3.5rem 0 1.625rem;
+  position: relative;
+}
+.card-display:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4.875rem;
+  height: 0.25rem;
+  top: 1.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #a9c23f;
+}
+.card-display h2 {
+  margin-bottom: 1.625rem;
+}
+.card-display .cards {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 77.5rem;
+  margin: 0 auto;
+}
+.card-display .card {
+  background: #fff;
+  width: 87%;
+  max-width: 21.875rem;
+  margin: 0 auto 1.375rem;
+  padding: 1.625rem 1.125rem;
+  display: flex;
+  align-items: center;
+}
+.card-display .card:last-of-type {
+  display: none;
+}
+@media screen and (min-width: 68.75em) {
+  .card-display .card:last-of-type {
+    display: flex;
+  }
+}
+.text {
+  max-width: 87%;
+  margin: 0 auto;
+  padding: 0.5rem 0 1.25rem;
+}
+@media print, screen and (min-width: 48em) {
+  .text {
+    padding: 2rem 0 3rem;
+  }
+}
+@media print, screen and (min-width: 64.0625em) {
+  .text {
+    max-width: 48rem;
+  }
+}
+.pdfs .card {
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+.pdfs .card:hover {
+  transform: scale(1.005);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+}
+.pdfs .card .img {
+  width: 100%;
+  position: relative;
+}
+.pdfs .card .img:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #a9c23f;
+  bottom: 0;
+  left: 0;
+}
+.pdfs .card h4,
+.pdfs .card p {
+  text-align: left;
+  margin: 0;
+}
+.pdfs .card h4 {
+  font-size: 1.375rem;
+  flex-basis: 1.875rem;
+}
+.pdfs .card p {
+  flex-basis: 60%;
+}
+.pdfs .card img {
+  width: 100%;
+}
+.pdfs .card figcaption {
+  width: 100%;
+  height: 12.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.pdfs .card .download {
+  flex-basis: 1.3125rem;
+  color: #060;
+  font-weight: 700;
+}
+@media (hover: hover) {
+  .pdfs .card .download:hover strong {
+    text-decoration: underline !important;
+  }
+}
+.pdfs a:visited .download strong {
+  color: #509e2f !important;
+}

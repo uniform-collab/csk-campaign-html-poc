@@ -7,7 +7,8 @@ export { default } from '../components/BasePage';
 
 export const getStaticProps = withUniformGetStaticProps({
   requestOptions: context => ({
-    state: Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+    state:
+      process.env.NODE_ENV === 'development' || Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   }),
   param: 'slug',
   client: getRouteClient(),
@@ -47,4 +48,9 @@ export const getStaticPaths = async () => {
     paths: nodes?.reduce((acc: string[], { path, type }) => (type === 'composition' ? [...acc, path] : acc), []) || [],
     fallback: 'blocking',
   };
+};
+
+// tODO: move the page file to another location or do  this conditionally
+export const config = {
+  unstable_runtimeJS: false,
 };
